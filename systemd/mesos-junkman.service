@@ -1,0 +1,13 @@
+[Unit]
+Description=Mesos Junkman is the metric collector for Mesos Cluster
+Requires=cloud-agent-agent.service
+After=cloud-agent-agent.service
+
+[Service]
+EnvironmentFile=-/etc/sysconfig/mesos-junkman
+ExecStart=/usr/bin/mesos_junkman.py $cluster_name
+Restart=always
+RestartSec=20
+
+[Install]
+WantedBy=multi-user.target
