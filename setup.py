@@ -6,7 +6,7 @@ setup(
     author='The Mesos Team',
     author_email='<mesos@dev.qiyi.com>',
     install_requires=[
-        'urllib3==1.15.1',
+        'urllib3==1.24.2',
         'APScheduler==3.1.0'
     ],
     scripts=[
